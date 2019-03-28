@@ -16,9 +16,9 @@
 
 package eu.ngpaas.nat.rest;
 
-import org.onlab.rest.AbstractWebApplication;
-
 import java.util.Set;
+
+import org.onlab.rest.AbstractWebApplication;
 
 /**
  * Sample REST API web application.
