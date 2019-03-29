@@ -23,9 +23,11 @@ import eu.ngpaas.pmlib.PolicyRules;
 import eu.ngpaas.pmlib.PolicyService;
 import eu.ngpaas.pmlib.SimpleResponse;
 import org.apache.felix.scr.annotations.Activate;
+import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Deactivate;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.ReferenceCardinality;
+import org.apache.felix.scr.annotations.Service;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.authentication.HttpAuthenticationFeature;
 import org.onlab.osgi.DefaultServiceDirectory;
@@ -61,7 +63,8 @@ import org.onosproject.net.topology.TopologyService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
+@Component(immediate = true)
+@Service
 public class NATManager implements PolicyService {
     private static final int FLOW_PRIORITY = 100;
     private static ApplicationId applicationId;
